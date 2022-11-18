@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-03 09:30:09.607427",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "qty",
+  "rate",
+  "amount",
+  "column_break_6",
+  "stock_uom",
+  "uom",
+  "description",
+  "palletized",
+  "hsnsac",
+  "deal_details_section",
+  "port",
+  "buyer",
+  "payment_terms",
+  "tt_terms",
+  "inocterms_c",
+  "column_break_10",
+  "country_of_origin",
+  "lsd",
+  "final_destination",
+  "container_type_c"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate",
+   "options": "currency"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "options": "currency"
+  },
+  {
+   "fetch_from": "item_code.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "label": "UOM"
+  },
+  {
+   "fetch_from": "item_code.description",
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "palletized",
+   "fieldtype": "Select",
+   "label": "Palletized",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "deal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Deal Details"
+  },
+  {
+   "fieldname": "port",
+   "fieldtype": "Link",
+   "label": "Port",
+   "options": "Port"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "buyer",
+   "fieldtype": "Link",
+   "label": "Buyer",
+   "options": "Company"
+  },
+  {
+   "fieldname": "inocterms_c",
+   "fieldtype": "Select",
+   "label": "Incoterms",
+   "options": "CIF\nFOB\nCFR"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "country_of_origin",
+   "fieldtype": "Link",
+   "label": "Country Of Origin",
+   "options": "Country"
+  },
+  {
+   "fieldname": "lsd",
+   "fieldtype": "Date",
+   "label": "LSD"
+  },
+  {
+   "fieldname": "final_destination",
+   "fieldtype": "Link",
+   "label": "Final Destination",
+   "options": "Final Destination"
+  },
+  {
+   "fieldname": "container_type_c",
+   "fieldtype": "Select",
+   "label": "Container Type",
+   "options": "\n20 Feet\n40 Feet"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "payment_terms",
+   "fieldtype": "Select",
+   "label": "Payment Terms",
+   "options": "None\nLC\nLC @ Sight\nDP @ Sight\nDA\nTT + DP\nTT"
+  },
+  {
+   "fetch_from": "item_code.stock_uom",
+   "fieldname": "stock_uom",
+   "fieldtype": "Data",
+   "label": "Stock Uom"
+  },
+  {
+   "fieldname": "hsnsac",
+   "fieldtype": "Data",
+   "label": "HSN/SAC",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:(doc.payment_terms==\"TT + DP\")",
+   "fieldname": "tt_terms",
+   "fieldtype": "Select",
+   "label": "TT + DP Terms",
+   "options": "\nTT 10/DP 90\nTT 20/DP 80\nTT 30/DP 70\nTT 40/DP 60\nTT 50/DP 50\nTT 100 %"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-02-01 11:48:35.162936",
+ "modified_by": "Administrator",
+ "module": "Imports",
+ "name": "LC Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

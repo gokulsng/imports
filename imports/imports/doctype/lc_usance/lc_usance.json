@@ -1,0 +1,224 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LCU.#####",
+ "creation": "2022-01-31 10:41:48.112100",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "supplier",
+  "column_break_2",
+  "company",
+  "transaction_date",
+  "schedule_date",
+  "currency_and_price_list_section",
+  "currency",
+  "price_list",
+  "column_break_10",
+  "bank_account",
+  "bank_email",
+  "section_break_6",
+  "items",
+  "section_break_12",
+  "amendment_c",
+  "deal_details_section",
+  "total_quantity",
+  "linked_indent",
+  "column_break_14",
+  "total_amount",
+  "total_in_words",
+  "lc_draft_upload_c_section",
+  "lc_application_upload",
+  "lc_draft_upload_c",
+  "supplier_correction_c",
+  "column_break_22",
+  "indent",
+  "signed_po",
+  "transmitted_copy_c",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "label": "Required By"
+  },
+  {
+   "fieldname": "currency_and_price_list_section",
+   "fieldtype": "Section Break",
+   "label": "Currency and Price List"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "LC Item"
+  },
+  {
+   "fieldname": "deal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Deal Details"
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Float",
+   "label": "Total Quantity"
+  },
+  {
+   "fieldname": "linked_indent",
+   "fieldtype": "Link",
+   "label": "Linked Indent",
+   "options": "Purchase Order"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Data",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "total_in_words",
+   "fieldtype": "Data",
+   "label": "Total In Words"
+  },
+  {
+   "fieldname": "lc_draft_upload_c_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "lc_draft_upload_c",
+   "fieldtype": "Attach",
+   "label": "LC Draft Upload"
+  },
+  {
+   "fieldname": "transmitted_copy_c",
+   "fieldtype": "Attach",
+   "label": "Transmitted Copy"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "LC Usance",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "lc_application_upload",
+   "fieldtype": "Attach",
+   "label": "LC Application Upload"
+  },
+  {
+   "fieldname": "supplier_correction_c",
+   "fieldtype": "Attach",
+   "label": "Supplier Correction C"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "indent",
+   "fieldtype": "Attach",
+   "label": "Indent"
+  },
+  {
+   "fieldname": "signed_po",
+   "fieldtype": "Attach",
+   "label": "Signed PO"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amendment_c",
+   "fieldtype": "Table",
+   "label": "Amendment",
+   "options": "Amendments Table"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Link",
+   "label": "Bank Account",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "bank_email",
+   "fieldtype": "Small Text",
+   "label": "Bank Email"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-02-25 11:04:00.624343",
+ "modified_by": "Administrator",
+ "module": "Imports",
+ "name": "LC Usance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

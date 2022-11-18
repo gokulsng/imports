@@ -1,0 +1,284 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LC.#####",
+ "creation": "2022-01-03 09:33:58.639635",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "supplier",
+  "indent_no_c",
+  "column_break_2",
+  "company",
+  "transaction_date",
+  "schedule_date",
+  "currency_and_price_list_section",
+  "currency",
+  "price_list",
+  "column_break_9",
+  "bank_account",
+  "bank_email",
+  "section_break_6",
+  "items",
+  "section_break_11",
+  "amendment_c",
+  "amended_from",
+  "lc_application_upload_section",
+  "lc_application_upload",
+  "lc_draft_upload_c",
+  "signature_c",
+  "supplier_correction_c",
+  "column_break_17",
+  "indent",
+  "signed_po",
+  "transmitted_copy_c",
+  "po_attach_c",
+  "amendment_1_section",
+  "supplier_request_c",
+  "column_break_24",
+  "swift_copy_c",
+  "amendment_2_section",
+  "supplier_request__c",
+  "column_break_28",
+  "swift_copy__c",
+  "amendment_3_section",
+  "supplier_request___c",
+  "column_break_32",
+  "swift_copy___c"
+ ],
+ "fields": [
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "LC Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "LC",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state!='LC Application To Be Upload') && (doc.workflow_state!='LC Application Uploaded'))",
+   "fieldname": "lc_draft_upload_c",
+   "fieldtype": "Attach",
+   "label": "LC Draft Upload"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state==\"Awaiting Acknowledge Copy\"))",
+   "fieldname": "transmitted_copy_c",
+   "fieldtype": "Attach",
+   "label": "Transmitted Copy"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "label": "Required By"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "currency_and_price_list_section",
+   "fieldtype": "Section Break",
+   "label": "Currency and Price List & Supplier Bank Account"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state==\"LC Application To Be Upload\") ||(doc.workflow_state==\"LC Application Uploaded\") ||(doc.workflow_state==\"LC Draft To Be Receive & Upload\") ||(doc.workflow_state==\"LC Draft Uploaded\") )",
+   "fieldname": "signature_c",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Signed Indent Attachment"
+  },
+  {
+   "fieldname": "po_attach_c",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "PO Attach "
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state==\"Bank Draft Not Ok\"))",
+   "fieldname": "supplier_correction_c",
+   "fieldtype": "Attach",
+   "label": "Supplier Correction "
+  },
+  {
+   "fieldname": "amendment_1_section",
+   "fieldtype": "Section Break",
+   "label": "Amendment 1"
+  },
+  {
+   "fieldname": "supplier_request_c",
+   "fieldtype": "Attach",
+   "label": "Supplier Request"
+  },
+  {
+   "fieldname": "swift_copy_c",
+   "fieldtype": "Attach",
+   "label": "Swift Copy"
+  },
+  {
+   "fieldname": "amendment_2_section",
+   "fieldtype": "Section Break",
+   "label": "Amendment 2"
+  },
+  {
+   "fieldname": "supplier_request__c",
+   "fieldtype": "Attach",
+   "label": "Supplier Request  "
+  },
+  {
+   "fieldname": "swift_copy__c",
+   "fieldtype": "Attach",
+   "label": "Swift Copy"
+  },
+  {
+   "fieldname": "amendment_3_section",
+   "fieldtype": "Section Break",
+   "label": "Amendment 3"
+  },
+  {
+   "fieldname": "supplier_request___c",
+   "fieldtype": "Attach",
+   "label": "Supplier Request "
+  },
+  {
+   "fieldname": "swift_copy___c",
+   "fieldtype": "Attach",
+   "label": "Swift Copy "
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lc_application_upload_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "lc_application_upload",
+   "fieldtype": "Attach",
+   "label": "LC Application Upload"
+  },
+  {
+   "fieldname": "indent",
+   "fieldtype": "Attach",
+   "label": "Signed Indent"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state==\"LC Application To Be Upload\") ||(doc.workflow_state==\"LC Application Uploaded\") ||(doc.workflow_state==\"LC Draft To Be Receive & Upload\") ||(doc.workflow_state==\"LC Draft Uploaded\") ||(doc.workflow_state==\"Awaiting Supplier Feedback\") ||(doc.workflow_state==\"Bank Draft Not Ok\")||(doc.workflow_state==\"Bank Draft Ok\"))",
+   "fieldname": "signed_po",
+   "fieldtype": "Attach",
+   "label": "Signed PO"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:((doc.workflow_state==\"Amendment\")||(doc.workflow_state==\"Awaiting Swift Copy\")||(doc.workflow_state==\"Swift Copy Uploaded\"))\neval:((doc.workflow_state==\"Awaiting For Supplier Feedback\")&& (doc.amendment_c==1))",
+   "fieldname": "amendment_c",
+   "fieldtype": "Table",
+   "label": "Amendment",
+   "options": "Amendment Table"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Link",
+   "label": "Bank Account",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "bank_email",
+   "fieldtype": "Small Text",
+   "label": "Bank Email"
+  },
+  {
+   "fieldname": "indent_no_c",
+   "fieldtype": "Data",
+   "label": "Indent No",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-02-10 16:12:34.815549",
+ "modified_by": "Administrator",
+ "module": "Imports",
+ "name": "LC",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

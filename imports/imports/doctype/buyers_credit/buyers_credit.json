@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-07 13:01:59.738635",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bc_applied_on_c",
+  "amended_from",
+  "bc_bank_ex_rate_c",
+  "purchase_order_c",
+  "column_break_5",
+  "bc_disbursment_date_c",
+  "no_of_days_for_bc_c",
+  "buyers_credit_amount_c",
+  "section_break_9",
+  "rate_of_interest_of_bc_c",
+  "lou_charges_c",
+  "amt_post_ecb_c",
+  "payment_date_ex_c",
+  "payment_bank_charges_c",
+  "column_break_15",
+  "bc_interest_amt_c",
+  "total_due_amount_c",
+  "bc_postage_charges_c",
+  "actual_date_c",
+  "actual_payment_ex_rate_c",
+  "payment_postage_charges_c",
+  "refrence_section_section_c_section"
+ ],
+ "fields": [
+  {
+   "fieldname": "bc_applied_on_c",
+   "fieldtype": "Date",
+   "label": "BC Applied On "
+  },
+  {
+   "fieldname": "bc_bank_ex_rate_c",
+   "fieldtype": "Currency",
+   "label": "BC Bank Ex Rate "
+  },
+  {
+   "fieldname": "purchase_order_c",
+   "fieldtype": "Link",
+   "label": "Purchase Order ",
+   "options": "Purchase Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bc_disbursment_date_c",
+   "fieldtype": "Data",
+   "label": "BC Disbursment Date "
+  },
+  {
+   "fieldname": "no_of_days_for_bc_c",
+   "fieldtype": "Data",
+   "label": "No Of Days for Bc "
+  },
+  {
+   "fieldname": "buyers_credit_amount_c",
+   "fieldtype": "Float",
+   "label": "Buyers Credit Amount"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Buyers Credit",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rate_of_interest_of_bc_c",
+   "fieldtype": "Currency",
+   "label": "Rate of Interest of BC "
+  },
+  {
+   "fieldname": "lou_charges_c",
+   "fieldtype": "Currency",
+   "label": "LOU Charges "
+  },
+  {
+   "fieldname": "amt_post_ecb_c",
+   "fieldtype": "Currency",
+   "label": "Final Bill Amount Post ECB"
+  },
+  {
+   "fieldname": "payment_date_ex_c",
+   "fieldtype": "Date",
+   "label": "Payment Date Ex Rate Spot"
+  },
+  {
+   "fieldname": "payment_bank_charges_c",
+   "fieldtype": "Currency",
+   "label": "Payment Bank Charges"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bc_interest_amt_c",
+   "fieldtype": "Float",
+   "label": "BC Interest Amount (USD))"
+  },
+  {
+   "fieldname": "total_due_amount_c",
+   "fieldtype": "Float",
+   "label": "Total Due Amount"
+  },
+  {
+   "fieldname": "bc_postage_charges_c",
+   "fieldtype": "Currency",
+   "label": "BC Postage Charges"
+  },
+  {
+   "fieldname": "actual_date_c",
+   "fieldtype": "Date",
+   "label": "Actual Payment Date"
+  },
+  {
+   "fieldname": "actual_payment_ex_rate_c",
+   "fieldtype": "Currency",
+   "label": "Actual Payment Ex Rate"
+  },
+  {
+   "fieldname": "payment_postage_charges_c",
+   "fieldtype": "Currency",
+   "label": "Payment Postage Charges"
+  },
+  {
+   "fieldname": "refrence_section_section_c_section",
+   "fieldtype": "Section Break",
+   "label": "Refrence Section"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-12-07 13:31:25.835943",
+ "modified_by": "Administrator",
+ "module": "Imports",
+ "name": "Buyers Credit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

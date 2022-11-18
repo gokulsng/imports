@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-08 15:14:47.148828",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "supplier_request_c",
+  "swift_copy_c"
+ ],
+ "fields": [
+  {
+   "fieldname": "supplier_request_c",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Supplier Request"
+  },
+  {
+   "fieldname": "swift_copy_c",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Swift Copy"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-02-08 15:16:10.392084",
+ "modified_by": "Administrator",
+ "module": "Imports",
+ "name": "Amendment Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

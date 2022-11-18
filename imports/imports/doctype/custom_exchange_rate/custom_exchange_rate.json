@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2021-12-07 16:04:08.577765",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "currency_c",
+  "conversion_rate_c",
+  "purchase_order_c",
+  "column_break_4",
+  "from_date_c",
+  "to_date_c",
+  "exchange_rate_history_c_section"
+ ],
+ "fields": [
+  {
+   "fieldname": "currency_c",
+   "fieldtype": "Link",
+   "label": "Currency ",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "conversion_rate_c",
+   "fieldtype": "Float",
+   "label": "Conversion Rate "
+  },
+  {
+   "fieldname": "purchase_order_c",
+   "fieldtype": "Link",
+   "label": "Purchase Order ",
+   "options": "Purchase Order"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date_c",
+   "fieldtype": "Date",
+   "label": "From Date "
+  },
+  {
+   "fieldname": "to_date_c",
+   "fieldtype": "Date",
+   "label": "To Date "
+  },
+  {
+   "fieldname": "exchange_rate_history_c_section",
+   "fieldtype": "Section Break",
+   "label": "Exchange Rate History"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-12-07 16:04:44.193451",
+ "modified_by": "Administrator",
+ "module": "Imports",
+ "name": "Custom Exchange Rate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
