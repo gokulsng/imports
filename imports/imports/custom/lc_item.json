@@ -1,0 +1,32 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "LC Item",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2022-01-29 17:17:07.331797",
+   "default_value": null,
+   "doc_type": "LC Item",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "payment_terms",
+   "idx": 0,
+   "modified": "2022-01-29 17:17:07.331797",
+   "modified_by": "Administrator",
+   "name": "LC Item-payment_terms-options",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "options",
+   "property_type": "Text",
+   "row_name": null,
+   "value": "None\nLC Usance\nLC @ Sight\nDP @ Sight\nDA\nTT + DP\nTT"
+  }
+ ],
+ "sync_on_migrate": 1
+}
